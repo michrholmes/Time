@@ -1,0 +1,33 @@
+//*************************************************************************************
+// Time.java						Author: Michelle Holmes
+//
+// Program converts seconds submitted by user into the time displaying hours minutes 
+// and seconds.
+//*************************************************************************************
+import java.util.Scanner;
+
+public class Time 
+{
+	//---------------------------------------------------------------------------------
+	// Calculates the time from seconds submitted by user. 
+	//_________________________________________________________________________________
+	
+	public static void main(String[] args) 
+	{
+		int hours, minutes, secondsIn, secondsOut;
+		
+		Scanner scan = new Scanner (System.in);
+		
+		System.out.println("Enter the number of seconds: ");
+		secondsIn = scan.nextInt();   // Number of seconds entered
+		
+		hours = secondsIn / 3600;               // Calculates hours
+		minutes = secondsIn % 3600 / 60;        // Calculates remaining minutes 
+		secondsOut = secondsIn % 3600 % 60;     // Calculates remaining seconds
+		
+		System.out.println("The time is: " + hours + " hours, " + minutes + 
+				" minutes, " + secondsOut + " seconds. ");
+		
+	}
+
+}
